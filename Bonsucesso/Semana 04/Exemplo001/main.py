@@ -1,0 +1,5 @@
+print("Oswaldo")
+print("Oswaldo")
+print("Oswaldo")
+print("Oswaldo")
+print("Oswaldo")
