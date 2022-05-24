@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+   <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+   <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+   <script>
+      $(function () {
+         $("#slide").slider({
+            orientation: "vertical",
+            range: true,
+            min: 0,
+            max: 50,
+            values: [15, 35],
+            slide: function (event, ui) {
+               $("#price").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+         });
+         $("#price").val("$" + $("#slide").slider("values", 0) +
+            " - $" + $("#slide").slider("values", 1));
+      });  
+   </script>
+
+<body>
+
+   <p>
+      <label for="price">Range:</label>
+      <input type="text" id="price" style="border:0; color:crimson; font-weight:bold;">
+   </p>
+   <div id="slide"></div>
+
+</html>

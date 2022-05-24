@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+   <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+   <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+   <style>
+      #sort-1 {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         width: 200px;
+      }
+
+      #sort-1 li {
+         margin: 0 5px 5px 5px;
+         padding: 0.4em;
+         padding-left: 1.5em;
+         font-size: 18px;
+         height: 20px;
+      }
+
+      .default {
+         background: crimson;
+         border: 2px solid brown;
+         color: white;
+      }
+   </style>
+   <script>
+      $(function () {
+         $("#sort-1").sortable();
+      });  
+   </script>
+</head>
+
+<body>
+   <ul id="sort-1">
+      <li class="default">First</li>
+      <li class="default">Second</li>
+      <li class="default">Third</li>
+      <li class="default">Fourth</li>
+      <li class="default">Fifth</li>
+      <li class="default">Sixth</li>
+      <li class="default">Seventh</li>
+   </ul>
+</body>
+
+</html>

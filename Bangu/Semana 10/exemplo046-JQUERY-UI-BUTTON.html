@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+  <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+
+  <script>
+    $(function () {
+      $("#btn-1, #btn-2, #btn-3, #btn-4").button();
+      $("#btn-5").buttonset();
+    });  
+  </script>
+</head>
+
+<body>
+  <a id="btn-1" href="">Anchor</a>
+  <button id="btn-2">Button</button>
+  <input id="btn-3" type="submit" value="Submit">
+  <input type="checkbox" id="btn-4">
+  <label for="btn-4">Toggle</label>
+  <br><br>
+  <div id="btn-5">
+    <input type="checkbox" id="check1">
+    <label for="check1">Left</label>
+    <input type="checkbox" id="check2">
+    <label for="check2">Middle</label>
+    <input type="checkbox" id="check3">
+    <label for="check3">Right</label>
+  </div>
+
+</html>

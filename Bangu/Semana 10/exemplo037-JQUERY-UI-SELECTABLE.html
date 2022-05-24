@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+    <style>  
+        #select-1 .ui-selecting,#select-2 .ui-selecting {   
+           background: gray ; }  
+        #select-1 .ui-selected,#select-2 .ui-selected {   
+           background: crimson; color: white; }  
+        #select-1,#select-2 { list-style-type: none; margin: 0;   
+           padding: 0; width: 200px; }  
+        #select-1 li,#select-2 li { margin: 5px; padding: 0.4em;   
+           font-size: 18px; height: 20px; }  
+        .ui-widget-content {  
+           background: turquoise;  
+           border: 2px solid black;  
+           color: black;  
+        }  
+     </style>  
+     <script>  
+        $(function() {  
+           $( "#select-1" ).selectable({  
+              delay : 500  
+           });  
+           $( "#select-2" ).selectable({  
+              distance : 150  
+           });  
+        });  
+     </script>  
+  </head>  
+  <body>  
+     <h3>Requires delay of 500ms</h3>  
+     <ol id="select-1">  
+        <li class="ui-widget-content">First</li>  
+        <li class="ui-widget-content">Second</li>  
+        <li class="ui-widget-content">Third</li>  
+        <li class="ui-widget-content">Fourth</li>  
+     </ol>  
+     <h3>Requires mouse to move a distance of 150px</h3>  
+     <ol  id="select-2">  
+        <li class="ui-widget-content">Fifth</li>  
+        <li class="ui-widget-content">Sixth</li>  
+        <li class="ui-widget-content">Seventh</li> 
+        <li class="ui-widget-content">Eighth</li> 
+     </ol>  
+  </body> 
+
+</html>

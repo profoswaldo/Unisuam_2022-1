@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+   <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+   <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+   <script>
+      $(function () {
+         $("#slide-1").slider({
+            orientation: "vertical"
+         });
+         $("#slide-1").slider('disable');
+         $("#slide-2").slider({
+            orientation: "vertical",
+            value: 70,
+            slide: function (event, ui) {
+               $("#mval").val(ui.value);
+            }
+         });
+         $("#mval").val($("#slide-2").slider("value"));
+      });  
+   </script>
+
+<body>
+
+   <h3>Disabled Slider:</h3>
+   <div id="slide-1"></div>
+   <h3>Enabled Slider:</h3>
+   <p>
+      <label for="mval">Value:</label>
+      <input type="text" id="mval" style="border:0; color:red; font-weight:bold;">
+   </p>
+   <div id="slide-2"></div>
+
+</html>

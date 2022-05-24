@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+  <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+  <script>  
+    $(function() {  
+       $( "#slide" ).slider({  
+          value: 30,  
+          animate:"slow",  
+          orientation: "vertical"  
+       });  
+    });  
+ </script>
+
+<body>
+
+  <h3>Slide Me!!</h3>  
+  <div id="slide"></div> 
+
+</html>

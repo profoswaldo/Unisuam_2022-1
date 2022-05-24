@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+    <style>
+        #drag-1 {
+            width: 50px;
+            height: 50px;
+            padding: 0.5em;
+            float: left;
+            background-color: crimson;
+            color: white;
+            border: 2px solid black;
+            text-align: center;
+
+        }
+
+        #drop-1 {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            float: left;
+            background-color: gray;
+            color: white;
+            border: 2px solid black;
+            text-align: center;
+
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#drag-1").draggable();
+            $("#drop-1").droppable();
+        });  
+    </script>
+</head>
+
+<body>
+    <div id="drag-1" class="ui-widget-header">
+        <p>Unisuam</p>
+    </div>
+    <div id="drop-1" class="ui-widget-header">
+        <p>Frontend</p>
+    </div>
+</body>
+
+</html>

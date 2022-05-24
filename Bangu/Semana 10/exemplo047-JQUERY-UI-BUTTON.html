@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+  <script src="jquery-ui-1.13.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+
+  <script>
+    $(function () {
+      $("#btn-1").button({
+        icons: {
+          primary: "ui-icon-locked"
+        },
+        text: false
+      });
+      $("#btn-2").button({
+        icons: {
+          primary: "ui-icon-gear",
+          secondary: "ui-icon-triangle-1-s"
+        }
+      });
+      $("#btn-3").button({
+        disabled: true
+      });
+
+    });  
+  </script>
+</head>
+
+<body>
+  <button id="btn-1">
+  </button>
+  <button id="btn-2">
+    Two icons Single Button
+  </button>
+  <button id="btn-3">
+    Disabled
+  </button>
+
+</html>
