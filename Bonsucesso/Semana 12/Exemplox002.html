@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/Javascript" src="Exemplox002.js"></script>
+</head>
+
+<body>
+    <form name="dados" onSubmit="return enviardados();">
+        Nome completo:
+        <input id= "txtNome" 
+               name="tx_nome" 
+               type="text" 
+               size="47" 
+               maxlength="150">
+        <br/>
+        E-mail: 
+        <input id="txtEmail" 
+               name="tx_email" 
+               type="text" 
+               size="56" 
+               maxlength="150">
+        <br/>
+        Mensagem:
+        <br/>
+        <textarea name="tx_mensagem" 
+                  cols="60" 
+                  rows="8" 
+                  id="txtMensagem">
+        </textarea>
+        <br/>
+        <input name="Submit" 
+               type="submit" 
+               value="Enviar dados">
+
+        <input name="Cancelar" 
+               type="reset" 
+               value="Redefinir">
+    </form>
+</body>
+
+</html>

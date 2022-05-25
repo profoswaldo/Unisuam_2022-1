@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-left: 2px;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: -5px;
+            color: blue;
+            font-family: tims, cursive, serif;
+            color: blue;
+        }
+
+        .help {
+            display: none;
+            font-size: 90%;
+        }
+
+        input:focus+.help {
+            display: inline-block;
+        }
+
+        input:required {
+            background: hsl(180, 50%, 90%);
+            border: 1px solid #999;
+        }
+
+        input:valid,
+        input:in-range {
+            background: hsl(120, 50%, 90%);
+            border-color: hsl(120, 50%, 50%);
+        }
+
+        input:invalid,
+        input:out-of-range {
+            border-color: hsl(0, 50%, 50%);
+            background: hsl(0, 50%, 90%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Registro</legend>
+            
+            <label for="name">Nome:</label> 
+            <input type=text 
+                   autofocus 
+                   id="name" 
+                   name="name" 
+                   value=""
+                   placeholder="Digite o seu nome aqui" 
+                   required>
+            <br/>
+            <label for="email">Email:</label> 
+            <input type="email" 
+                   id="email" 
+                   name="email" 
+                   value="" 
+                   required
+                   placeholder="xxxxx@yyyy.zzz">
+
+            <br/>
+            <label for="website">Website:</label> 
+            <input type="url" 
+                   id="website" 
+                   name="website" 
+                   value=""
+                   placeholder="http://xxxxxx.yyy">
+            <br/>
+            <label for="ID">Criar um ID:</label> 
+            <input type="text" 
+                   id="ID" 
+                   required 
+                   name="ID" 
+                   pattern="[0-9][A-Z]{3}"
+                   placeholder="[0-9][A-Z]-Um Dígito e 3 letras maiúsculas"
+                   title="Digite um dígito seguido por três letras maiúsculas">
+            <br/>
+            <label for="Country">País:</label>
+            <input list="Countries" 
+                   placeholder="Selecione o nome de seu País">
+            <datalist id="Countries">
+                <option value="USA">
+                <option value="Brasil">
+                <option value="Argentina">
+                <option value="México">
+                <option value="Bolívia">
+            </datalist>
+            <br/>
+            <label for="Age">Idade:</label> 
+            <input type="number" 
+                   id="Age" 
+                   name="Age" 
+                   value="" 
+                   required 
+                   min="18"
+                    max="75"> 
+            <span id="age-format" 
+                  class="help">Idade válida: 18 à 75 anos
+            </span>
+
+            <br/>
+            <label for="Color">Cor Favorita:</label> 
+            <input type="color" 
+                   id="Color" 
+                   name="Color">
+            <br/>
+            <label for="Date">
+                <abbr title="Data de Aniversário">
+                    Aniversário :
+                </abbr>
+            </label> 
+            <input type="date" 
+                   id="Date"
+                   name="Date">
+            <br/>
+            <label for="Week">Semana:</label> 
+            <input type="week" 
+                   id="Week" 
+                   name="Week">
+            <br/>
+            <label for="Month">Mês</label> 
+            <input type="month" 
+                   id="Month" 
+                   name="Month">
+            <br/>
+            <label for="Time">Hora</label> 
+            <input type="time" 
+                   id="Time" 
+                   name="Time">
+            <br/>
+            <label for="DateTime">Data e Hora</label> 
+            <input type="datetime-local" 
+                   id="DateTime" 
+                   name="DateTime">
+            <br/>
+            <input type="submit" 
+                   value="Submit">
+        </fieldset>
+    </form>
+</body>
+
+</html>
